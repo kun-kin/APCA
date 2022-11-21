@@ -86,7 +86,7 @@
   background-color: var(--greybg-color);
 }
 @media (min-width: 992px) {
-  .wrapper.home .header .logo {
+  .wrapper#home .header .logo {
     display: none;
   }
 }

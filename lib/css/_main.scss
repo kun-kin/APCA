@@ -1,6 +1,6 @@
 .wrapper {
     background-color: var(--greybg-color);
-    &.home {
+    &#home {
         .header {
             .logo {
                 @media(min-width: 992px) {
