@@ -1,0 +1,81 @@
+.header {
+    // height: 40px;
+    background-color: var(--greybg-color);
+    position: relative;
+    .container {
+        @media(max-width: 576px) {
+            display: flex;
+            align-items: center;
+        }
+    }
+    .logo {
+        position: absolute;
+        top: 40%;
+        left: 100px;
+        max-width: 110px;
+        z-index: 1;
+        @media(max-width: 991.98px) {
+            position: relative;
+            left: 0;
+            margin: auto;
+        }
+        @media(max-width:576px) {
+            margin-left: 0;
+            margin-right: auto;
+        }
+    }
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        list-style: none;
+        margin-bottom: 0;
+        &-item {
+            display: inline-block;
+            color: inherit;
+            padding: 10px 0;
+            .menu-link {
+                text-transform: capitalize;
+                color: inherit;
+                padding: 10px 0;
+                display: block;
+                position: relative;
+                &:hover,
+                &.active {
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        height: 1px;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        background-color: var(--textred-color);
+                    }
+                }
+            }
+        }
+        @media(max-width:576px) {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background-color: var(--greybg-color);
+            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12), 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            .menu-item {
+                display: block;
+            }
+        }
+    }
+}
+
+.wrapper.home {
+    .header {
+        .logo {
+            display: none;
+        }
+    }
+}
